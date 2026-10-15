@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en" data-theme="night">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#292d2a" />
+  <meta name="description" content="Play Varsha's Snack Dash! Tap, drag, or use the arrow keys to help a little cat catch falling treats." />
+  <meta property="og:title" content="varsha.cat — Snack Dash" />
+  <meta property="og:description" content="Tiny paws. Falling treats. One very happy cat. Play instantly." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://varsha.cat/" />
+  <link rel="canonical" href="https://varsha.cat/" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/styles.css" />
+  <title>Varsha’s Snack Dash · varsha.cat</title>
+</head>
+<body>
+  <svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="i-cat" viewBox="0 0 32 32"><path d="M5 16 4 5l9 5a18 18 0 0 1 6 0l9-5-1 11c3 13-25 13-22 0Z"/><path d="M11 17v2m10-2v2m-7 3 2 1 2-1"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 1v2m0 18v2M1 12h2m18 0h2M4 4l2 2m12 12 2 2M4 20l2-2M18 6l2-2"/></symbol>
+    <symbol id="i-volume" viewBox="0 0 24 24"><path d="m11 4-5 5H2v6h4l5 5Zm5 4c3 2 3 6 0 8m3-11c5 4 5 10 0 14"/></symbol>
+    <symbol id="i-fish" viewBox="0 0 48 48"><path d="M35 25c-8-17-25-17-32 0 7 17 24 17 32 0Zm0 0 10-12v24Z"/><circle cx="13" cy="24" r="1.7"/><path d="M23 15c-4 5-4 15 0 20M19 11l5-5 6 11"/></symbol>
+    <symbol id="i-yarn" viewBox="0 0 48 48"><circle cx="22" cy="23" r="16"/><path d="M10 12c8 5 18 15 21 24M6 23c9 1 18 7 23 15M17 8c1 13 8 23 19 25M31 11c-10 4-18 10-22 20m28-6c7 0 9 5 6 9s-8 2-7 7 8 3 10 2"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 21S2 15 2 8a5 5 0 0 1 10-1 5 5 0 0 1 10 1c0 7-10 13-10 13Z"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 48 48"><path d="M31 5c-18 12-6 33 11 27C30 54-1 36 10 15 14 8 22 5 31 5Z"/></symbol>
+    <symbol id="i-trophy" viewBox="0 0 24 24"><path d="M7 3h10v6a5 5 0 0 1-10 0Zm0 2H3v3c0 3 3 4 5 4m9-7h4v3c0 3-3 4-5 4m-4 2v6m-4 1h8"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="13" r="8"/><path d="M12 8v5l3 2M9 1h6m-3 0v4"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h16m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-restart" viewBox="0 0 24 24"><path d="M4 10a8 8 0 1 1 1 8M4 4v6h6"/></symbol>
+  </svg>
+
+  <main class="arcade" aria-label="Varsha's Snack Dash game">
+
+
+
+
+    <section id="game-board" class="game-board" aria-label="Move Varsha with the left and right arrow keys, or tap and drag to catch falling treats" tabindex="0">
+    <div class="scoreboard" aria-label="Game scores">
+      <div class="score-item current-score"><svg aria-hidden="true"><use href="#i-fish"/></svg><span><small>TREATS</small><strong id="score">0</strong></span></div>
+      <div class="score-item time-score"><svg aria-hidden="true"><use href="#i-clock"/></svg><span><small>TIME LEFT</small><strong><span id="time-left">45</span><span class="seconds">s</span></strong></span></div>
+      <div class="score-item best-score"><svg aria-hidden="true"><use href="#i-trophy"/></svg><span><small>BEST</small><strong id="best-score">0</strong></span></div>
+      <div class="round-controls"><button id="sound-toggle" class="icon-button sound-button" type="button" aria-label="Mute music and sounds" aria-pressed="true"><svg aria-hidden="true"><use href="#i-volume"/></svg><span class="sound-slash"></span></button><button id="pause-button" class="icon-button" type="button" aria-label="Pause game" aria-pressed="false">Ⅱ</button><button id="restart-button" class="icon-button" type="button" aria-label="Restart game"><svg aria-hidden="true"><use href="#i-restart"/></svg></button></div>
+    </div>
+      <div id="room-art" aria-hidden="true"></div>
+      <p id="hint" class="game-hint">Help Varsha catch the falling treats!</p>
+      <div class="value-key" aria-hidden="true"><span><svg><use href="#i-fish"/></svg>+1</span><span><svg><use href="#i-yarn"/></svg>+2</span><span><svg><use href="#i-heart"/></svg>+3</span></div>
+      <div id="drops" aria-hidden="true"></div>
+      <div id="player" class="player" data-facing="right"><div id="player-art" aria-hidden="true"></div><span class="player-name">Varsha <span>♡</span></span></div>
+      <div id="catch-effects" aria-hidden="true"></div>
+      <div class="pause-screen" aria-hidden="true"><span>Taking a little paws.</span><small>Tap pause to keep playing</small></div>
+    <footer class="game-controls">
+      <button id="move-left" class="move-button" type="button" aria-label="Move Varsha left"><svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+      <div class="control-hint"><span class="touch-hint">tap or drag to move</span><span class="keyboard-hint"><kbd>←</kbd><kbd>→</kbd> to move · <kbd>Space</kbd> to pause</span><small>tiny paws. big snack energy.</small></div>
+      <button id="move-right" class="move-button" type="button" aria-label="Move Varsha right"><svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+    </footer>
+    </section>
+
+
+  </main>
+
+  <p id="live-announcement" class="sr-only" role="status" aria-live="polite"></p>
+  <dialog id="result-dialog" aria-labelledby="result-title">
+    <h1 id="result-title">Purrfect playtime!</h1>
+    <img id="share-preview" class="share-preview" alt="Varsha’s snack-catching scorecard" />
+    <div class="result-score"><strong id="final-score">0</strong><span>happy little points</span></div>
+    <p id="result-message">Varsha thinks you make a pretty great team.</p>
+    <p class="share-caption">Challenge a friend at <a href="https://varsha.cat/">varsha.cat</a> ♡</p>
+    <div class="share-actions"><button id="share-score" type="button" disabled>Share score ♡</button><button id="save-card" type="button" disabled>Save card ↓</button></div>
+    <p id="share-status" class="share-status" role="status" aria-live="polite"></p>
+    <button id="play-again" class="play-again" type="button">One more? <svg aria-hidden="true"><use href="#i-restart"/></svg></button>
+  </dialog>
+  <noscript><p class="noscript">Enable JavaScript to play with Varsha.</p></noscript>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>

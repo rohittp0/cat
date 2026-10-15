@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.wrangler/
+.idea/
+.DS_Store
+output/
+.playwright-mcp/
+*.log

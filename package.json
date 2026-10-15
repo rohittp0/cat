@@ -1,0 +1,14 @@
+{
+  "name": "varsha-cat",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A tiny, cozy cat room for varsha.cat",
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "build": "node scripts/build.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
