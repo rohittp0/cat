@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Varsha’s Snack Dash — social preview</title>
+  <style>
+    @font-face{font-family:'DM Sans';src:url('../public/fonts/dm-sans.ttf') format('truetype');font-weight:100 900;font-display:block}
+    @font-face{font-family:Fraunces;src:url('../public/fonts/fraunces.ttf') format('truetype');font-weight:600;font-display:block}
+    *{box-sizing:border-box}
+    html,body{width:1200px;height:630px;margin:0;overflow:hidden}
+    body{background:#333d32;color:#414535;font-family:'DM Sans',sans-serif}
+    .poster{position:absolute;inset:30px;background:#faf7f0;border:2px solid #c5cbb3;border-radius:35px;overflow:hidden}
+    .poster:before{content:'';position:absolute;inset:13px;border:1px solid #e5e1d5;border-radius:23px}
+    .copy{position:absolute;left:66px;top:50px;z-index:2;width:650px}
+    .eyebrow{margin:0 0 21px;color:#8a735f;font-size:17px;font-weight:750;letter-spacing:3.8px;text-transform:uppercase}
+    h1{margin:0;font-family:Fraunces,Georgia,serif;font-size:87px;font-weight:600;letter-spacing:-4px;line-height:1.01}
+    h1 span{display:block}
+    .tagline{margin:27px 0 10px;font-size:28px;font-weight:650;letter-spacing:-.7px}
+    .description{margin:0;color:#777b64;font-size:23px;font-weight:450;letter-spacing:-.4px}
+    .domain{display:inline-flex;align-items:center;gap:19px;margin-top:33px;padding:13px 24px;border-radius:99px;background:#414535;color:#faf7f0;font-size:23px;font-weight:650;letter-spacing:-.3px}
+    .domain svg{width:22px;height:22px}
+    .scene{position:absolute;right:13px;top:0;width:445px;height:570px}
+    .arch{position:absolute;left:61px;top:83px;width:328px;height:386px;border-radius:165px 165px 25px 25px;background:#f3dfd1}
+    .arch:before{content:'';position:absolute;inset:13px;border:1.5px solid #e6c6b5;border-radius:154px 154px 17px 17px}
+    .cat{position:absolute;left:45px;top:108px;width:365px;height:412px;z-index:2}
+    .cat>svg{display:block;width:100%;height:100%;overflow:visible}
+    .cat-eyes-open{display:none}.cat-eyes-happy{display:inline}
+    .rug{position:absolute;left:17px;top:460px;width:415px;height:70px;border-radius:50%;background:#ebbaa7;border:2px solid #e3ac96;transform:rotate(-2deg)}
+    .rug:after{content:'';position:absolute;inset:9px 20px;border:1.5px solid #fae0cc;border-radius:50%}
+    .decor{position:absolute;inset:0;width:100%;height:100%;z-index:3;overflow:visible}
+    .tinyprint{position:absolute;left:68px;bottom:27px;font-size:12px;font-weight:600;letter-spacing:1.5px;color:#a09b88;text-transform:uppercase}
+  </style>
+</head>
+<body>
+  <main class="poster">
+    <div class="copy">
+      <p class="eyebrow">A tiny game with a big heart</p>
+      <h1><span>Varsha’s</span><span>Snack Dash</span></h1>
+      <p class="tagline">Tiny paws. Big snack energy.</p>
+      <p class="description">Catch treats. Chase your best score.</p>
+      <div class="domain">varsha.cat <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+    </div>
+    <div class="scene" aria-hidden="true">
+      <div class="arch"></div>
+      <div class="rug"></div>
+      <div class="cat" id="cat"></div>
+      <svg class="decor" viewBox="0 0 445 570" fill="none">
+        <g fill="#deb86b"><path d="m89 132 5 14 14 5-14 5-5 14-5-14-14-5 14-5Z"/><path d="m378 330 5 13 13 5-13 5-5 13-5-13-13-5 13-5Z"/><path d="m45 391 3 9 9 3-9 3-3 9-3-9-9-3 9-3Z"/></g>
+        <path d="M361 210c-15-17-33 0-21 14l21 18 21-18c12-14-6-31-21-14Z" fill="#d89885" transform="rotate(15 361 223)"/>
+        <g transform="translate(298 67) rotate(18)" stroke="#8a6650" stroke-width="2.5" stroke-linejoin="round"><path d="M-24 0c12-15 33-14 45 0-12 14-33 15-45 0Zm-1 0-13-12v24Z" fill="#dbbb7d"/><circle cx="10" cy="-2" r="2" fill="#8a6650" stroke="none"/><path d="M-6-9q-5 9 0 18"/></g>
+        <g transform="translate(79 476) rotate(-13)" stroke="#87977a" stroke-width="2.5"><circle r="24" fill="#b9c1a3"/><path d="M-17-17C0-11 15 4 17 17M-24 0C-5-7 11-3 23 9M-2-24C-12-9-15 7-8 22M9-22C16-8 14 8 4 23"/><path d="M-19 14c-29-4-42 3-37 13 4 8 18 6 18 0 0-5-8-6-11-2" fill="none"/></g>
+        <g fill="#abb799"><circle cx="57" cy="261" r="4"/><circle cx="395" cy="429" r="4"/><circle cx="363" cy="116" r="3.5"/></g>
+        <path d="m112 61 5 10m-17-3 10 4m9-16 1 11" stroke="#c5ab79" stroke-width="2.5" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <span class="tinyprint">Made for a little joy</span>
+  </main>
+  <script type="module">
+    import { catArt } from '../public/room-art.js';
+    document.querySelector('#cat').innerHTML = catArt;
+    await document.fonts.ready;
+    document.body.dataset.ready = 'true';
+  </script>
+</body>
+</html>

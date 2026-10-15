@@ -47,4 +47,6 @@ Catch falling fish, yarn, and hearts to earn points during each 45-second round.
 
 Each round ends with a shareable illustrated PNG scorecard. Share it through the native share sheet where supported, or save the image and copy the challenge. The description includes `https://varsha.cat` so friends can play too.
 
+Link previews use Open Graph and Twitter large-image metadata in `public/index.html`, with the static 1200 × 630 PNG at `public/social-preview.png`. Its editable source is `scripts/social-preview.html`; serve the repository root, wait for `body[data-ready="true"]`, and capture it at 1200 × 630 CSS pixels to regenerate the PNG. The image is committed so Cloudflare builds need no browser or image dependencies.
+
 Cloudflare's official guides: [Git integration](https://developers.cloudflare.com/pages/configuration/git-integration/) and [custom domains](https://developers.cloudflare.com/pages/configuration/custom-domains/).
