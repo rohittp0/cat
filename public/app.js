@@ -112,6 +112,7 @@ async function prepareCard(finalScore, bestScore) {
     $('share-preview').hidden = false;
     $('share-score').disabled = false;
     $('save-card').disabled = false;
+    if (document.activeElement === $('play-again')) $('share-score').focus({ preventScroll: true });
     $('share-status').textContent = 'A little card for your very good score.';
   } catch {
     if (generation === cardGeneration && result.open) {
